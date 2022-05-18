@@ -9,8 +9,7 @@ else
 {
   myCarrito = new Carrito(datos);
 }
-/* let productos = "";
- */
+
 fetch('../json/data.json')
 .then((r)=>r.json())
 .then((data)=>{productos=data});
