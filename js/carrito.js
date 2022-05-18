@@ -80,15 +80,7 @@ function pagar()
 
 }
 
-
 /*
-// Ejecución del simulador 
-function iniciar() {
-    
-    menu();
-
-}
-
 function menu() {
   
   const nodoMenu = document.createElement("div");

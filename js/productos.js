@@ -12,7 +12,9 @@ let productos = "";
 
 fetch('../json/productosData.json')
 .then((r)=>r.json())
-.then((data)=> {productos=data});
+.then((data)=> {productos=data;
+mostrarProductos(0);});
+
 
 // Ejecución del simulador 
 function iniciarProductos() {
@@ -65,12 +67,14 @@ let claseElegida = "";
 function mostrarProductos(clase) //clase del boton presionado
 {
   claseElegida = clase;
+  console.log(clase);
   const nodoProductos = document.querySelector("#productosWrapper");
   nodoProductos.innerHTML="";
   let prod ="";
   if(clase===0)
   {
     prod = [...productos];
+
   }
   else {
     
@@ -79,7 +83,7 @@ function mostrarProductos(clase) //clase del boton presionado
   }
 
   prod.forEach((el)=> {
-
+    console.log("si");
     const nodoItem = document.createElement("div");
     nodoItem.setAttribute("class", "col-lg-5 col-md-12 m-2 row align-items-center");
     nodoItem.innerHTML=`<div class="col-3 p-1">
