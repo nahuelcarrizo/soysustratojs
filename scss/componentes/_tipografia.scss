@@ -1,0 +1,56 @@
+@import url('https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300;400&display=swap');
+@import url(//db.onlinewebfonts.com/c/952bab25f6798d6bb1937d67e9bee4dd?family=Sans);
+@import url('https://fonts.googleapis.com/css2?family=Cinzel&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Mali:wght@300;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Comic+Neue:wght@300;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kalam&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Handlee&display=swap');
+// variables
+$roboto: 'Roboto Slab', serif;
+$manifiesto-font-1: 'Kaushan Script', cursive;
+$manifiesto-font-2: 'Cinzel', serif;
+$nosotros-font-1: 'Playfair Display', serif;
+$open-sans: 'Open Sans', sans-serif;
+$oswald:'Oswald', sans-serif;
+$dm-text: 'DM Serif Text', sans-serif;
+$mali: 'Mali', cursive;
+$comic: 'Comic Neue', cursive;
+$kalam: 'Kalam', cursive;
+$handlee: 'Handlee', cursive;
+
+// index
+#index__title--1 {
+    font-size: 2rem;
+    color: whitesmoke;
+}
+// nosotros
+#nosotros__text-1 {
+    font-family: $nosotros-font-1;
+    font-size: 3rem;
+}
+.nosotros__text-2 {
+    text-align: left;
+}
+
+// faqs
+#faqs__text-1 {
+    font-family: $nosotros-font-1;
+    font-size: 3rem;
+}
+
+// SHOP
+.product__title--2 {
+    font-size: 1rem;
+    color: #413c3c;
+    padding-left: 20px;
+}
+.modal__text-1 {
+    font-family: "Playfair Display", sans-serif;
+    font-size: 2.7rem;
+    font-weight: 500;
+}

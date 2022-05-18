@@ -1,0 +1,51 @@
+
+.infoCarrito {
+    width: 50%;
+    max-width: 500px;
+   
+}
+
+#formWrapper {
+    
+    margin-left: 3rem;
+    margin-top: 4rem;
+
+}
+
+.carritoItem {
+    
+    margin: .5rem 0 .5rem 1.5rem;
+    padding: 0.25rem;
+    background-color: white;
+    border-bottom: 1px solid #dee2e6;
+    max-width:45%;
+    height: auto;
+
+}
+
+i {
+    font-size: 2rem;
+    height: 1rem;
+    width: 1rem;
+    display: inline-block;
+    color: black;
+}
+
+.eliminarBtn, .agregarBtn {
+
+    border: none !important;
+    font-size: 0.7rem !important;
+    color: black;
+    background-color: white;
+    border-radius: 1rem;
+
+}
+.agregarBtn:hover{
+    color: white;
+    background-color: black;
+}
+
+.cantidadCarrito {
+
+    margin: 0;
+}

@@ -1,0 +1,236 @@
+@use '../componentes/mixins' as *;
+@use '../componentes/animaciones' as *;
+@use '../componentes/tipografia' as *;
+
+#section1-shp {
+    margin-top: 100px;
+    overflow: hidden;
+    height: 100%;
+    margin-bottom: 10%;
+}
+#shop__text-1 {
+  font-family: $nosotros-font-1;
+  font-size: 2.7rem;
+}
+#shop__text-2 {
+  font-family: $manifiesto-font-2;
+  font-size: 1rem;
+}
+.shop__container-1 {
+  margin: 2rem 0;
+}
+.product__link {
+  display: block;
+  max-width: 100%;
+  text-align: center;
+  text-decoration: rgb(36, 39, 42);
+  text-decoration-color: rgb(36, 39, 42);
+  text-decoration-line: none;
+  text-decoration-style: solid;
+  width: 100%;
+  cursor: pointer;
+}
+
+.product__container-title {
+  position: absolute;
+  bottom: 1.5rem;
+  z-index: 4;
+  left: 1rem;
+}
+
+.product__link h1 {
+  color: whitesmoke;
+  font-family: $manifiesto-font-2;
+  font-size: 1.7rem;
+  font-weight: 400;
+  letter-spacing: .2rem;
+  text-align: left;
+}
+.product__link div:nth-child(2) {
+  &::after{
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: 3;
+  background-color: #000;
+  opacity: 0.1;
+  }
+}
+.carousel-inner {
+  height: 500px;
+}
+.product__link div img {
+  width: 100%;
+  min-width: 77.75px;
+  height: 17rem;
+  position: relative;
+}
+
+// Modals
+
+.animation__up-modals {
+  @include animation-up-2;
+  animation-delay: .1s;
+}
+.animation__down-modals {
+  @include animation-down-1;
+  animation-delay: .1s;
+}
+
+.modal-header {
+  border: none;
+}
+.modal-height {
+  height: 600px;
+  background-image: url(../imgs/shop/modals/modal-bg-2.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: 0px 300px;
+}
+.modal-content div {
+  z-index: 10;
+}
+.modal-body.animation__up-modals {
+  padding: 0 !important;
+  max-height: 100%;
+}
+.modal {
+  & i {
+  font-size: 1.6rem;
+  margin: 0 6px;
+  color: #24272a;
+  }
+  & a {
+  text-decoration-line: none;
+  z-index: 1000;
+  }
+  & a span {
+  
+  z-index: 1002;
+  }
+  & button {
+  z-index: 1000;
+  }
+  & h3 {
+  font-family: $dm-text;
+  font-size: 1.3rem;
+  font-weight: 400;
+  color: #24272a;
+  font-style: italic;
+  }
+  & h4 {
+  font-family:'Gill Sans', sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  color: #24272a;
+  }
+}
+.carousel-item img {
+  object-fit: cover;
+  z-index: 1000;
+  height: 16rem;
+}
+#carouselExampleControls2 img {
+  height: 12rem;
+  margin-top: 1rem;
+}
+
+.modal-content > button {
+  border: none;
+  background-color: #33373b;
+  position: absolute;
+  bottom: 2rem;
+  left: 0;
+  right: 0;
+  margin: auto;
+
+  font-size: 1rem;
+  font-weight: 200;
+  z-index: 20;
+  // padding: .7rem 1.5rem;
+  font-family: $roboto;
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+    .links-index {
+      width: auto;
+    }
+    .product__link div:nth-child(2)::before {
+      // background-image: linear-gradient(0deg, rgba(255,255,255,0.9) 0%, rgba(0,0,0,0.2) 5%, rgba(255,255,255,0.9) 95%);
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      z-index: 3;
+    }
+    .product__link div:nth-child(2) {
+      &::after{
+      content: '';
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      z-index: 3;
+      background-color: #000;
+      opacity: 0.3;
+      }
+      &:active {
+        &::after{
+          opacity: 0;
+        }
+      }
+      &:hover {
+        &::after{
+        opacity: 0;
+        }
+        &.product__link h1 {
+          font-family: "Playfair Display", sans-serif;
+          font-size: 2.5rem;
+          letter-spacing: 4px;
+        }
+      }
+    }
+}
+
+
+
+  /* Medium devices (desktop) */
+  @media (min-width: 992px) {
+  /* SHOP */
+  #section1-shp {
+    padding-top: 3%;
+    overflow: hidden;
+    margin-bottom: 30px;
+    font-family: "Monotype Sabon";
+    margin-top: 10%;
+    margin-bottom: 15%;
+  }
+  #section1-shp row {
+    margin: 3rem;
+  }
+  .product__link div:nth-child(2) {
+    height: 37.5rem;
+  }
+  .product__link div img {
+    height: 100%;
+  }
+  .product__link h1 {
+    font-size: 2.7rem;
+  }
+  #shop__text-1 {
+    font-size: 3rem;
+    margin-bottom: 2rem;
+  }
+  #shop__text-2 {
+    font-size: 1.4rem;
+    margin-bottom: 4rem;
+  }
+}
+

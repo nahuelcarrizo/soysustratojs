@@ -1,0 +1,56 @@
+// personalización componentes frameworks
+// colores
+$link-color: #fff;
+$black: #111111;
+
+// Navbar
+// scss-docs-start navbar-theme-variables
+$navbar-dark-color:                 rgba(white, .9) !default;
+$navbar-dark-hover-color:           rgba(white, 1) !default;
+$navbar-light-color:                rgba(black, .9) !default;
+$navbar-light-hover-color:          rgba(black, 1) !default;
+// scss-docs-end navbar-theme-variables
+
+// Carousel
+$carousel-transition-duration: .5s;
+$carousel-control-color: black;
+//
+
+$link-color: #fff;
+
+// Accordion
+$accordion-color:                         white;
+$accordion-bg:                            black;
+$accordion-button-color:                  white;
+$accordion-button-bg:                     white;
+$accordion-button-active-bg:              white;
+$accordion-button-active-color:           white;
+$accordion-icon-color:                    white;
+$accordion-icon-active-color:             white;
+// scss-docs-end accordion-variables
+//
+
+// offcanvas
+// backdrop offcanvas
+// $modal-backdrop-opacity:            0;
+// close button
+$btn-close-opacity:          1;
+
+// scss-docs-start offcanvas-variables
+$offcanvas-transition-duration:     .4s;
+$offcanvas-horizontal-width: 300px;
+// scss-docs-end offcanvas-variables
+
+// navbar menu hamburguer icon
+.navbar-toggler {
+  &:focus {
+    box-shadow: 0 0 0 0 !important;
+  }
+}
+
+// grid
+$grid-gutter-width:           .5rem;
+
+  //IMPORTAR BOOTSTRAP
+@import "../node_modules/bootstrap/scss/bootstrap.scss";
+

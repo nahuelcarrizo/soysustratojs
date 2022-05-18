@@ -1,0 +1,32 @@
+@use '../componentes/mixins' as *;
+
+.nosotros__wrapper-1 {
+    padding: 49% 1.5rem 2rem 1.5rem;
+    text-align: center;
+    line-height: 1.5rem;
+}
+
+@each $number in 1,2,3 {
+    .nosotros__img-#{$number} {
+        background-image: url("../imgs/nosotros/nosotros-#{$number}.jpeg");
+        @include image-ss;
+        width: 327px;
+        height: 430px;
+    }
+}
+
+ /* Medium devices (tablets, 768px and up) */
+ @media (min-width: 768px) {
+    .nosotros__wrapper-1  {
+        padding-top: 25%;
+      }
+}
+  /* Medium devices (desktop) */
+  @media (min-width: 992px) {
+    .nosotros__wrapper-1  {
+        padding-top: 15%;
+      }
+    .nosotros-item {
+        padding-left: 5%;
+    }
+}

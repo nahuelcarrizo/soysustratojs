@@ -1,0 +1,158 @@
+@use '../componentes/tipografia' as *;
+
+footer {
+    background-color: black;
+    font-family: $open-sans;
+    & a {
+        color: white;
+        line-height: 12px !important;
+        font-size: .7rem;
+        text-decoration: none;
+        letter-spacing: 1.2px;
+    }
+    & p {
+        font-size: .7rem;
+        letter-spacing: 3px;
+        margin-bottom: 0.5rem;
+    }
+    & span {
+        margin-bottom: 0.5rem;
+    }
+    & ul {
+        list-style: none;
+        padding-left: 0;
+    }
+    &.offcanvas__item {
+        border: none;
+    }
+}
+#footer-sumate {
+    font-size: .5rem;
+    letter-spacing: 1.2px;
+}
+
+.footer__social {
+    & ul {
+        justify-content: flex-end;
+    }
+    & li {
+        margin-right: .8rem;
+    }
+}
+
+.footer__link {
+    color: #fff !important;
+    text-decoration: none;
+    // background: 0 0;
+    cursor: pointer;
+}
+.footer__wrapper-1 {
+    display: inline-flex;
+    flex-direction: row;
+    flex-wrap: none;
+    justify-content: space-between
+}
+.footer__logo {
+    width: 8rem;
+}
+
+footer svg path {
+    fill: white;
+}
+
+.footer__border::after {
+    content: "";
+    border-bottom: 1px solid;
+    border-color: #fff;
+    opacity: .14;
+    display: block;
+}
+.footer__social {
+    flex: 1 1 auto;
+}
+
+.footer-1 {
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+    justify-content: center;
+}
+
+.footer__newsletter-input {
+    background-color: transparent;
+    border-color: rgb(58, 58, 58);
+    border-width: 0.8px;
+    width: 150px;
+    padding: 0 10px 0 45px;
+}
+input::placeholder{
+    opacity: 1;
+    color: white;
+    font-size: .6rem;
+    letter-spacing: .3px;
+}
+.footer__newsletter-btn {
+    border: 1px dotted transparent;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 46px;
+    color: white;
+    cursor: pointer;
+    display: inline-block;
+    overflow: visible;
+    background: 0 0;
+    align-items: center;
+}
+.icon-email {
+    width: 25px;
+    height: 26px;
+    overflow: hidden;
+    display: inline-block;
+    vertical-align: middle;
+    fill: currentColor;
+    color: white;
+}
+.icon-email > path:nth-child(1) {
+    fill: none;
+    stroke-width: 3px;
+    stroke: currentColor;
+    stroke-linecap: miter;
+    stroke-linejoin: miter;
+}
+
+.d-yes {
+    display: none;
+}
+@media (min-width: 768px) {
+    .footer__wrapper-1 {
+        display: block;
+        align-items: flex-start;
+    }
+    #accordion-footer{
+        display: none;
+    }
+    .d-yes {
+        display: flex;
+        flex-direction: column;
+    }
+    footer p {
+        font-size: 1rem;
+    }
+    .footer__link {
+        font-size: .7rem;
+        letter-spacing: .1rem;
+    }
+    #footer-sumate {
+        font-size: .7rem;
+    }
+    .footer__social {
+        & li {
+        margin: 1rem .9rem 0 0;
+    }
+        & ul {
+        justify-content:flex-start;
+        align-items: center;
+    }
+}
+}

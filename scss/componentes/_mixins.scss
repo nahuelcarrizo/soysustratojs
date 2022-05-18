@@ -1,0 +1,69 @@
+@use '../custom';
+@use 'tipografia' as *;
+
+
+//MIXIN GRADIANTE
+@mixin gradient {
+background: linear-gradient(
+    to right,
+    rgba($primary, 0.95),
+    rgba($secondary, 0.95));
+}
+@mixin after-before {
+    position: absolute;
+    content: "";
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+@mixin image-ss {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+@mixin image-faqs-lg {
+    background-size:auto;
+    height: 450px;
+}
+
+@mixin animation-up-1 {
+    animation: 1.5s cubic-bezier(.26,.54,.32,1) forwards;
+    opacity: 0;
+    animation-name: rise-up-1;
+}
+@mixin animation-up-2 {
+    animation: 1s cubic-bezier(.26,.54,.32,1) forwards;
+    opacity: 0;
+    animation-name: rise-up-2;
+}
+@mixin animation-down-1 {
+    animation: 2.5s cubic-bezier(.26,.54,.32,1) forwards;
+    animation-name: rise-down-1;
+}
+
+@mixin animation-fade {
+    animation: fade-in .7s ease 1.5s forwards;
+}
+
+@mixin animation-zoom {
+    animation: 2s ease-out .1s forwards;
+    animation-name: zoom-fade;
+    opacity: 0;
+}
+
+@mixin animation2 {
+    animation: 3s ease 0s fordwards;
+    animation-name: animation1;
+}
+@mixin animation4 {
+    animation: .2s ease-in-out 0s forwards;
+    animation-name: animation3;
+    opacity: 0;
+}
+@mixin opacity2 {
+    animation: 2s ease-out 1s forwards;
+    animation-name: opacity1;
+    opacity: 0;
+}
