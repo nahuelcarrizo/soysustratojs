@@ -54,16 +54,12 @@ class Carrito {
         const idProductos = this.productos.map(el=>el.producto.id);
         const index = idProductos.indexOf(producto);
         this.productos[index].cantidad-=1;
-        if(this.productos[index].cantidad=1)
-        {
-            this.cambiarIcono();
-        }
-        else if(this.productos[index].cantidad<=0)
+        if(this.productos[index].cantidad<1)
         {
             this.productos.splice(index,1); 
         }
         this.guardar();
-        mostrarCarrito();        
+        iniciarCarrito();        
     }
 
     
@@ -74,10 +70,4 @@ class Carrito {
         iconoCarrito.innerHTML=cantidadProductos;
     }
 
-    cambiarIcono()
-    {
-        const eliminarBtn = document.getElementsByClassName("fa-minus");
-        console.log(eliminarBtn);
-        eliminarBtn.className="fa-solid fa-trash";
-    }
 }

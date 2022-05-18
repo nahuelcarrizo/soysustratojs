@@ -10,14 +10,15 @@ else
   myCarrito = new Carrito(datos);
 }
 
-fetch('../json/data.json')
-.then((r)=>r.json())
-.then((data)=>{productos=data});
-
 
 function iniciarCarrito(){
 
+  fetch('../json/data.json')
+.then((r)=>r.json())
+.then((data)=>{productos=data});
+
   mostrarCarrito();
+  myCarrito.cantidadCarrito();
 
 }
 
@@ -33,6 +34,7 @@ function mostrarCarrito()
   const product = myCarrito.productos;
   
   product.forEach((el)=> {
+
     let cadena="";
     let subTotal = el.producto.precio*el.cantidad
     cadena+=`<div class="row carritoItem">
@@ -45,9 +47,9 @@ function mostrarCarrito()
               </div>
               <div class="container col-3"> 
                 <div class="row align-items-center align-middle">
-                  <button class="eliminarBtn btn btn-outline-dark col" onclick="myCarrito.removerItem(${el.producto.id});"><i class="fa-solid fa-minus"></i></button>
+                  <button class="eliminarBtn btn btn-outline-dark col" onclick="myCarrito.removerItem(${el.producto.id});myCarrito.cantidadCarrito();"><i class="fa-solid fa-minus"></i></button>
                   <p class="cantidadCarrito col text-center">${el.cantidad}</p>         
-                  <button class="agregarBtn col" onclick="myCarrito.agregar(${el.producto.id});notificarCarrito();"><i class="fa-solid fa-plus"></i></i></button>
+                  <button class="agregarBtn col" onclick="myCarrito.agregar(${el.producto.id});cantidadCarrito();"><i class="fa-solid fa-plus"></i></i></button>
                 </div>
               </div>
             </div>`;  
@@ -61,7 +63,6 @@ function mostrarCarrito()
   nodoCarrito.appendChild(nodoTotal);
  
 }
-
 
 function agregarCarrito(productoId)
 { 

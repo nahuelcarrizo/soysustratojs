@@ -10,17 +10,20 @@ else
 }
 let productos = "";
 
-fetch('../json/productosData.json')
-.then((r)=>r.json())
-.then((data)=> {productos=data;
-mostrarProductos(0);});
+
 
 
 // Ejecución del simulador 
 function iniciarProductos() {
-    
+  
+  fetch('../json/productosData.json')
+  .then((r)=>r.json())
+  .then((data)=> {productos=data;
+  mostrarProductos(0);});
+
   mostrarBotones();
   mostrarFiltro();
+  myCarrito.cantidadCarrito();
 
 }
 
@@ -67,7 +70,6 @@ let claseElegida = "";
 function mostrarProductos(clase) //clase del boton presionado
 {
   claseElegida = clase;
-  console.log(clase);
   const nodoProductos = document.querySelector("#productosWrapper");
   nodoProductos.innerHTML="";
   let prod ="";
@@ -83,7 +85,6 @@ function mostrarProductos(clase) //clase del boton presionado
   }
 
   prod.forEach((el)=> {
-    console.log("si");
     const nodoItem = document.createElement("div");
     nodoItem.setAttribute("class", "col-lg-5 col-md-12 m-2 row align-items-center");
     nodoItem.innerHTML=`<div class="col-3 p-1">
@@ -94,7 +95,7 @@ function mostrarProductos(clase) //clase del boton presionado
                             <p>${el.precio}</p>
                         </div>
                         <div class="col-3 text-center"> 
-                          <button class="agregarBtn btn btn-outline-dark d-inline-block m-0" onclick="agregarCarrito(${el.id});notificarCarrito();"><img src="../imgs/productos/masicon.png" class="masBtn"/>Agregar</button>   
+                          <button class="agregarBtn btn btn-outline-dark d-inline-block m-0" onclick="agregarCarrito(${el.id});notificarCarrito();"><i class="fa-solid fa-plus"></i>Agregar</button>   
                         </div>`;
     nodoProductos.appendChild(nodoItem);
 
@@ -176,19 +177,20 @@ function buscar()
   // Mostrar los productos
   let inp = document.querySelector("#myInput").value.toUpperCase();
   const productosFiltrados = productos.filter(producto=>producto.nombre.includes(inp));
+  console.log(productos);
   console.log(productosFiltrados);
   let cadena ='';
   productosFiltrados.forEach((el)=>{
-    cadena+=` <div class="col-3 p-1">
-                <img src="${el.img}" alt="${el.nombre}" class="img-thumbnail">    
-              </div>
-              <div class="col-6">
+    cadena+=`<div class="col-3 p-1">
+              <img src="${el.img}" alt="${el.nombre}" class="img-thumbnail">    
+            </div>
+            <div class="col-6">
                 <p>${el.nombre}</p>
                 <p>${el.precio}</p>
-              </div>
-              <div class="col-3 d-inline align-middle"> 
-                <button class="agregarBtn btn btn-outline-secondary" onclick="agregarCarrito(${el.id})"><img src="../imgs/productos/masicon.png" class="masBtn"/>Agregar</button>   
-              </div>`;
+            </div>
+            <div class="col-3 text-center"> 
+              <button class="agregarBtn btn btn-outline-dark d-inline-block m-0" onclick="agregarCarrito(${el.id});notificarCarrito();"><img src="../imgs/productos/masicon.png" class="masBtn"/>Agregar</button>   
+            </div>`;            
 
     const nodoProductos = document.querySelector("#productosWrapper");
     nodoProductos.innerHTML=cadena;
