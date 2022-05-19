@@ -11142,6 +11142,7 @@ textarea.form-control-lg {
 #nosotros__text-1 {
   font-family: "Playfair Display", serif;
   font-size: 3rem;
+  margin-left: 2rem;
 }
 
 .nosotros__text-2 {
@@ -12602,6 +12603,10 @@ i {
 
 .cantidadCarrito {
   margin: 0;
+}
+
+.fa-arrow-left {
+  color: black !important;
 }
 
 /*# sourceMappingURL=style.css.map */

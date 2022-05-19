@@ -13,7 +13,7 @@ else
 
 function iniciarCarrito(){
 
-  fetch('../json/data.json')
+  fetch('../json/productosData.json')
 .then((r)=>r.json())
 .then((data)=>{productos=data});
 
@@ -49,7 +49,7 @@ function mostrarCarrito()
                 <div class="row align-items-center align-middle">
                   <button class="eliminarBtn btn btn-outline-dark col" onclick="myCarrito.removerItem(${el.producto.id});myCarrito.cantidadCarrito();"><i class="fa-solid fa-minus"></i></button>
                   <p class="cantidadCarrito col text-center">${el.cantidad}</p>         
-                  <button class="agregarBtn col" onclick="sumarCantidad(${el.producto.id});myCarrito.cantidadCarrito();"><i class="fa-solid fa-plus"></i></i></button>
+                  <button class="agregarBtn col desdeCarrito" onclick="sumarUno(${el.producto.id});myCarrito.cantidadCarrito();"><i class="fa-solid fa-plus"></i></i></button>
                 </div>
               </div>
             </div>`;  
@@ -65,16 +65,17 @@ function mostrarCarrito()
 }
 
 
-function sumarCantidad {
+function sumarUno(item) 
+{
 
   let idProductos = productos.map(el=>el.id);
-  let i = idProductos.findIndex(el=>el===productoId);
+  let i = idProductos.findIndex(el=>el===item);
   let producto = productos[i]; //objeto
   myCarrito.agregar(producto); 
   myCarrito.guardar();
 
-}
 
+}
 
 function pagar()
 {

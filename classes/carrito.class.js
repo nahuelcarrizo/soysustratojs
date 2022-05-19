@@ -9,24 +9,25 @@ class Carrito {
     {
 
          //buscarProducto
-        console.log(producto);
         let mapped= this.productos.map(element=>element.producto); //mapped = [{prd1}, {prd2}, {prd3}]
         let enCarrito = mapped.find(element=>element.id===producto.id); //enCarrito = {objeto}
         if(!enCarrito){
             
             this.productos.push({cantidad:1, producto}); //si el objeto no existe, pushea 1un de producto a myCarrito
-            console.log("1");
         }  
         else{
 
             let indexed = mapped.map(element=>element.id);
             let index = indexed.indexOf(producto.id);
-            console.log(index);
             this.productos[index].cantidad+=1;
-            console.log("+1");
+
+            const btn = event.target
+            if(btn.classList.contains("desdeCarrito"))
+            {
+                mostrarCarrito();
+            }
 
         } 
-
     }
 
     guardar()
