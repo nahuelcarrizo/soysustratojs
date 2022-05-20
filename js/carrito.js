@@ -41,7 +41,7 @@ function mostrarCarrito()
               <div class="col-3 p-1">
                 <img src="${el.producto.img}" alt="${el.producto.nombre}" class="img-thumbnail">    
               </div>
-              <div class="col-6 d-flex flex-column text-left align-items-start">
+              <div class="col-6 d-flex flex-column text-start align-items-start">
                   <p>${el.producto.nombre}</p>
                   <p>$ ${subTotal.toLocaleString()}</p>
               </div>
