@@ -57,11 +57,14 @@ function mostrarCarrito()
     total+=subTotal;
     });
 
-  const nodoTotal = document.createElement("h4");
-  nodoTotal.setAttribute("id", "totalCarrito");
-  nodoTotal.innerHTML=`Total: $ ${total.toLocaleString()}`;
-  nodoCarrito.appendChild(nodoTotal);
- 
+  const nodoTotal = document.querySelector("#totalWrapper")
+  nodoTotal.setAttribute("class", "mt-5 d-flex flex-column");
+  nodoTotal.innerHTML= `<div class="w-100 h-100">
+                          <p class="text-start h3">Total a pagar<span class="p-5 text-success">$${total.toLocaleString()}</span></p>
+                        </div>
+                        <div class="w-100 h-100">
+                          <button class="btn btn-success w-100">Siguiente</button>
+                        </div>`;
 }
 
 

@@ -138,23 +138,29 @@
   </header>
     <main>
       <section class="section1-nosotros row">  <!--bloque-->
-        <div class="nosotros__wrapper-1">
+        <div class="carrito__wrapper">
           <div class="nosotros-item d-flex flex-row align-items-center">
             <a href="productos.html" class="d-flex">
               <i class="fa-solid fa-arrow-left"></i>
             </a>
-            <h1 id="nosotros__text-1" class="d-flex">Resumen de pedido.</h1>
+            <h1 id="nosotros__text-1" class="d-flex mb-5">Resumen de pedido.</h1>
           </div>
-          <div class="row mt-5" id="formWrapper">
-            <div class="col-12">
-              <form id="myForm" onsubmit="pagar();">
-                <input type="text" class="mt-1 form-control mr-sm-2 infoCarrito"  placeholder="Nombre">
-                <input type="text" class="mt-1 form-control mr-sm-2 infoCarrito"  placeholder="Número de celular">
-              </form>
+          <div class="container-fluid row">
+            <div id="carritoWrapper" class="col-6 m-0">
+            </div>
+            <div class="col-3 m-0">
+              <div class="row m-0" id="formWrapper">
+                <div class="col-12">
+                  <form id="myForm" onsubmit="pagar();">
+                    <input type="text" class="mt-1 form-control mr-sm-2 infoCarrito w-100"  placeholder="Nombre">
+                    <input type="text" class="mt-1 form-control mr-sm-2 infoCarrito w-100"  placeholder="Número de celular">
+                  </form>
+                </div>
+              </div>
+              <div class="row m-0 col-6" id="totalWrapper">
+              </div>
             </div>
           </div>
-        </div>
-        <div id="carritoWrapper" class="col m-5">
         </div>
       </section>
     </main>

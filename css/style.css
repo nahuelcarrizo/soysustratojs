@@ -12571,6 +12571,12 @@ input::placeholder {
   margin-top: 4rem;
 }
 
+.carrito__wrapper {
+  padding: 10% 1.5rem 15% 1.5rem;
+  text-align: center;
+  line-height: 1.5rem;
+}
+
 .carritoItem {
   margin: 0.5rem 0 0.5rem 1.5rem;
   padding: 0.25rem;
